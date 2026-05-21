@@ -1,0 +1,145 @@
+BIG O NOTATION != performance
+    - qão bem o algoritmo escala em proporção ao input (eficiência do código)
+    - Como esse código se comporta quando a quantidade de dados cresce MUITO?
+
+    O(1) --> mesmo tempo indepentende ao tamanho do input -> TEMPO CONSTANTE
+
+    O(log n) --> busca binária -> TEMPO LOGARITMO
+
+    O(n) --> pra inputs pequenos é mais rápido porém para inputs grandes é mais lento (escala na mesma proporção do input) -> TEMPO LINEAR
+
+    O(n2) --> fica quadraticamente + lento
+
+    O(n log n) --> n x log n -> Para cada “camada” do problema, percorremos n elementos. E existem log n camadas  -> LINEAR LOGARÍTIMICA
+
+
+    complexidade temporal -> quanto tempo o código leva
+    complexidade espacial -> quanto memória o código usa
+    Alocar memória --> reservar espaço na RAM
+    Usar memória -> ocupar esse espaço com dados
+
+O que é memória?
+
+    Quando o programa roda:
+
+    variáveis
+    arrays
+    objetos
+    funções
+
+    Tudo vai para RAM.
+
+    A RAM é como uma mesa de trabalho.
+
+    Quanto mais coisas você coloca nela:
+
+    mais memória usada.
+
+Garbage Collector (importantíssimo no JS)
+
+    JavaScript possui um “faxineiro automático”.
+
+    Quando algo não está mais sendo usado:
+
+    o JS libera memória sozinho.
+
+
+LINKED LIST -> cada elemento aponta para o próximo.
+
+    10 → 20 → 30 → 40
+    ┌────┬─────┐    ┌────┬─────┐    ┌────┬─────┐
+    │ 10 │  •──┼──► │ 20 │  •──┼──► │ 30 │ null│
+    └────┴─────┘    └────┴─────┘    └────┴─────┘
+    Cada item é chamado de: Node (nó)    
+    null: fim da lista
+    ponteiro: guarda endereço do proximo node
+    Head: Começo da lista
+    Tail: Fim da lista
+
+    em memória
+
+    1. array 
+                    RAM
+        ┌──────┬──────┬──────┬──────┐
+        │  10  │  20  │  30  │  40  │
+        └──────┴──────┴──────┴──────┘    
+
+    2. linked list
+
+                        RAM
+
+        endereço 100 → [10 | ponteiro → 450]
+        endereço 450 → [20 | ponteiro → 900]
+        endereço 900 → [30 | ponteiro → null]
+
+    linked list insere em O(1) e percorre em O(n) enquanto array inseri em O(n) e pode percorrer em O(1)
+
+QUEUE (FILA)
+    FIFO -> First in First out
+    LIFO -> Last In First Out
+    enqueue -> adicionar na fila
+    dequeue -> remover da fila
+
+TREES (ÁRVORES)
+    estrutura hierárquica, possui níveis (pai / filhos) -> Árvores organizam dados hierarquicamente para tornar buscas, inserções e navegação extremamente eficientes.
+
+    root: raiz (topo da arvore)
+    children: filhos
+    parent: pai
+    leaf: folha
+    node: nó, cada elemento da ÁRVORES
+    edge: aresta, ligação entre nodes
+
+          A        ← root
+        /   \
+       B     C 
+      / \   / \
+     D   E F   G ← leafs
+
+                         A <- root
+          edge  ->  /         \
+                  B             C <- parent
+               /     \       /     \
+children <-  D         E    F       G
+           /   \            \
+         H       I           J <- leaf
+
+
+
+
+
+
+O sistema ou código binário -> linguagem fundamental da computação moderna. --> base 2 (0 ou 1) -> ligado (1) / desligado (0)
+
+BIT --> Binary Digit -> menor unidade possível -> 2 bits = 00 / 01 / 11 / 10 -> 3 bits = 000 / 111 / 010 / 100 / 110.....
+    quantos mais bits mais possibilidades
+
+BYTE -> unidade básica de medida de armazenamento de dados na computação -> 8 bits
+    ex: 01010111 = 8 bits = 1 byte
+    cabem 256 valores em 8 bits, pois 2^8 = 256
+
+    1011 = cada posição vale potência de 2, faz o calculo das potencia e soma os resultados onde possui 1 
+    1011 (binario) = 11 decimal
+
+    transformar decimal para binario = dividi por 2 e guarda os restos
+
+Linguagem de baixo nível
+
+    É uma linguagem:
+
+    próxima do hardware.
+
+Linguagem de alto nível
+
+    É uma linguagem:
+
+    próxima do pensamento humano.
+
+    Analogia perfeita
+        Alto nível
+
+        É dirigir um carro automático.
+
+        Baixo nível
+
+        É montar o motor manualmente.

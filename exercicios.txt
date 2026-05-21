@@ -1,0 +1,99 @@
+IDENTIFICAR A COMPLEXIDADE ESPACIAL E TEMPORAL DESSES 10 ALGORITMOS
+
+1
+function soma(arr: number[]) {
+  let total = 0;
+
+  for (const n of arr) {
+    total += n;
+  }
+
+  return total;
+}
+
+2
+function primeiro(arr: number[]) {
+  return arr[0];
+}
+
+3
+function pares(arr: number[]) {
+  const resultado = [];
+
+  for (const n of arr) {
+    if (n % 2 === 0) {
+      resultado.push(n);
+    }
+  }
+
+  return resultado;
+}
+
+4
+function imprimir(arr: number[]) {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      console.log(arr[i], arr[j]);
+    }
+  }
+}
+
+5
+function copiar(obj: Record<string, string>) {
+  const novo: Record<string, string> = {};
+
+  for (const chave in obj) {
+    novo[chave] = obj[chave];
+  }
+
+  return novo;
+}
+
+6
+function busca(arr: number[], alvo: number) {
+  for (const n of arr) {
+    if (n === alvo) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
+7
+function dobro(arr: number[]) {
+  return arr.map(n => n * 2);
+}
+
+8
+function matriz(n: number) {
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n; j++) {
+      for (let k = 0; k < n; k++) {
+        console.log(i, j, k);
+      }
+    }
+  }
+}
+
+9
+function contar(n: number) {
+  while (n > 1) {
+    n = Math.floor(n / 2);
+  }
+}
+
+10
+function duplicados(arr: number[]) {
+  const vistos = new Set<number>();
+
+  for (const n of arr) {
+    if (vistos.has(n)) {
+      return true;
+    }
+
+    vistos.add(n);
+  }
+
+  return false;
+}
