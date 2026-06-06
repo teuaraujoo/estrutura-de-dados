@@ -76,9 +76,12 @@ LINKED LIST -> cada elemento aponta para o próximo.
 
 QUEUE (FILA)
     FIFO -> First in First out
-    LIFO -> Last In First Out
     enqueue -> adicionar na fila
     dequeue -> remover da fila
+    
+STACK (PILHA)
+    LIFO -> Last In First Out
+
 
 TREES (ÁRVORES)
     estrutura hierárquica, possui níveis (pai / filhos) -> Árvores organizam dados hierarquicamente para tornar buscas, inserções e navegação extremamente eficientes.
