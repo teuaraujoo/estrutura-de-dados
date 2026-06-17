@@ -118,7 +118,7 @@ class BinarySearchTree {
 
     insert(value) {
         const newNode = new TreeNode(value);
-
+        console.log(newNode)
         // Se árvore vazia
         if (!this.root) {
             this.root = newNode;
