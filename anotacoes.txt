@@ -146,3 +146,71 @@ Linguagem de alto nível
         Baixo nível
 
         É montar o motor manualmente.
+
+Serviçoes AWS
+
+    - S3 (BUCKET) 
+        -> armazenamento de objetos (assets, documentos, dados, backups, sites estaticos)
+        -> barato / escalável, porem latência baixa e tem um custo por acesso 
+
+    - EC2 
+        -> instância de servidores
+        -> servidores web
+        -> processamento
+    
+    - ECS (elastic container service)
+        -> orquestração 
+        -> docker
+        -> cluster de ec2
+        -> simplifica a escalabilidade das aplicações (escalar on demand), otimiza recursos porém é complexo de usar, pode aumnetar seu custo e talvez pode se tornar um lock-in
+
+    - ALB (load balancer)
+        -> distribuir load (tráfego)
+        -> http / https
+        -> rotas
+        -> muito custo em relação a outros load balancer
+    
+    - Fargate (serveless compute engine)
+        -> nao configura infra, voce apenas defini e faz deploy de containers
+        -> reduz a compelxidade e tem um custo basedo em uso
+
+    - Elastic beanstalk (paas)
+        -> provisionar infra, escalabilidade
+        -> complexidade baixa e custo menor em relação a soluções parecidas na aws, mas um lock-in legal 
+
+    - LAMBDA (serveless)
+        -> pay-per-use
+        -> 1 request, 1 endpoint, 1 invocação
+        -> muitas escalabilidade e relativamente barato
+        -> tem muito timeout, pouca memória e cold-start
+
+    - Step functions
+        -> coordenbar workflows
+        -> consegue usar retrys / filas
+        -> muito lock-in e complexidade
+    
+    - RDS 
+        -> banco de dados SQL
+
+    - DYNAMO
+        -> banco de dados NOSQL
+        -> escalabilidade e baixa latência
+        -> curva de aprendizado alta
+
+    - SQS
+        -> serviço de fila
+
+    - SNS
+        -> usado para pub/sub
+    
+    - CLOUDWATCH
+        -> vizualiazação de logs
+    
+    - SECRETS MANAGER
+        -> armazenar segredos (cahves de api por exemplo)
+
+    - CLOUD FRONT
+        -> é uma CDN
+
+    - AMPLIFY
+        -> usada para armazenar aplicação fullstack (next por exemplo)
