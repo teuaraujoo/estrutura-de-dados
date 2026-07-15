@@ -979,3 +979,35 @@ APRENDIZADOS
 18.2 Idempotencia
 - Idempotencia e a propriedade que garante que uma operacao, quando aplicada uma ou multiplas vezes, produz exatamente o mesmo resultado.
 - Ela nao altera o estado inicial do sistema apos a primeira execucao.
+
+
+Generics (Genéricos) ⭐⭐⭐⭐⭐
+
+O que é <T>
+Múltiplos genéricos (<T, K>)
+Constraints (<T extends User>)
+Genéricos em funções
+Genéricos em classes
+Genéricos em interfaces
+
+Utility Types
+
+Partial<T>
+Pick<T, K>
+Omit<T, K>
+Required<T>
+Readonly<T>
+Record<K, T>
+
+Type Narrowing
+
+typeof
+instanceof
+in
+Type Guards
+
+Mapped Types
+
+Conditional Types
+
+Infer
