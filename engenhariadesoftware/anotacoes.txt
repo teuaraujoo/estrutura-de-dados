@@ -1,0 +1,8 @@
+Requisitos funcionais ->
+
+
+Requisitos não funcionais -> 
+
+Componentes Core -> peças centrais e fundamentais do sistema
+
+
