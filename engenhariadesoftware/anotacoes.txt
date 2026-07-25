@@ -17,7 +17,7 @@ Base numérica
         - base 32 -> A-Z e 2-7, muita usada em chaves de autenticacao e senhas temporarias
         - base 36 -> 0 a 9 e A-Z
 
-Encodings/representações:
+Encodings(Como representar bytes usando caracteres):
         
         - base 58 -> caracteres que causam confusão visual são removidos (ex: 0o il0), muito usado em endereços bitcoin
         - base 62 -> A-Z, a-z e 0-9, muito usado em encurtadores de links, ids unicos, seguranca de urls ja que ele remove caracteres especias (/, +)
@@ -27,7 +27,7 @@ Encodings/representações:
         - base128 -> 
         - base256 -> utiliza 256 símbolos diferentes, mapeando cada byte (8 bits) diretamente para um caractere único ou palavra legíve
         
-Identificadores:
+Identificadores/representacoes:
 
     UUID -> Universally Unique Identifier
         - possui 128 bits ou 16 bytes
@@ -61,11 +61,12 @@ O que o jwt utilzia?
 Hash: 
     - 
 
-    SHA-256 -> Secure Hash Algorithm -> gera um hash de 256 bits
-    HMAC -> Hash-based Message Authentication Code -> mistura a mensagem com uma chave secreta antes de calcular o hash.
-    HS256 -> HMAC + SHA-256
-    RS256 -> RSA Signature -> utiliza criptografia assimétrica.
-    ES256 -> usa curvas elípticas -> ECDSA + SHA256
+    Algoritmos criptográficos:
+        SHA-256 -> Secure Hash Algorithm -> gera um hash de 256 bits
+        HMAC -> Hash-based Message Authentication Code -> mistura a mensagem com uma chave secreta antes de calcular o hash.
+        HS256 -> HMAC + SHA-256
+        RS256 -> RSA Signature -> utiliza criptografia assimétrica.
+        ES256 -> usa curvas elípticas -> ECDSA + SHA256
 
 
 Qual usar?
@@ -121,4 +122,8 @@ A diferença é importante:
     - Assinatura digital → garante que os dados não foram alterados e que vieram de quem diz ter enviado.
 
 
+Encoding → representação dos dados.
+Encryption → criptografia.
+Hashing → geração de hash.
+Signing → assinatura digital.
         
