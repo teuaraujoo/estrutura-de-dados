@@ -1,8 +1,124 @@
-Requisitos funcionais ->
+Requisitos funcionais -> Oque o sistema faz
 
 
-Requisitos não funcionais -> 
+Requisitos não funcionais -> Como o sistema faz
 
 Componentes Core -> peças centrais e fundamentais do sistema
 
+Base numérica 
+    - formas diferentes de representar um número
+    - defini quantos símbolos existem para representar um números
+    -
 
+        - base 2 -> binário (0 e 1)
+        - base 8 -> (0 a 7)
+        - base 10 -> 0 a 9 
+        - base 16 -> hexadecimal (0 a 9 e A - F) -> ex: representação de cores
+        - base 32 -> A-Z e 2-7, muita usada em chaves de autenticacao e senhas temporarias
+        - base 36 -> 0 a 9 e A-Z
+
+Encodings/representações:
+        
+        - base 58 -> caracteres que causam confusão visual são removidos (ex: 0o il0), muito usado em endereços bitcoin
+        - base 62 -> A-Z, a-z e 0-9, muito usado em encurtadores de links, ids unicos, seguranca de urls ja que ele remove caracteres especias (/, +)
+        - base 64 -> é um encoding (A-Z, a-z, 0-9, +, / e =), pega bytes e transforma em texto, usado para enviar dados binários em protocolos que aceitam apenas texto
+        - base85 -> mais eficiente que base64, utiliza menos caractres para representar bytes
+        - base91 -> método + avançado de codificação de dados binários em caracteres ASCII que usa um alfabeto de 91 caracteres. 
+        - base128 -> 
+        - base256 -> utiliza 256 símbolos diferentes, mapeando cada byte (8 bits) diretamente para um caractere único ou palavra legíve
+        
+Identificadores:
+
+    UUID -> Universally Unique Identifier
+        - possui 128 bits ou 16 bytes
+
+        - composto por 36 caracteres hexadecimais e 4 hífens
+
+        - composto por numeros escritos em base16
+
+    KSUID -> K-Sortable Unique Identifier
+        - Muito usado em sistemas distribuídos.
+        - guarda a data e a hora de criação, permitindo ordenação cronológica direta
+
+    NanoId -> mais compacto do que uuid, utilizando 21 caracteres ao invés de 36
+
+    snowflake ID -> Criado pelo twitter, utiliza 64bits, muito usado em sistema distribuídos
+
+
+O que o jwt utilzia?
+
+    ele é dividio em 3 partes: HEADER.PAYLOAD.SIGNATURE
+
+    - O header é um JSON simples.
+    - o payload também é um json, os dois são codificados em base64URL
+    -  A signature, é codificada com algum algoritimo (H256, RS256) e depois esses bytes gerados sao representados em base64URL
+
+    - base64URL -> o base64 normal utiliza caracteres que nao podem ser usados em urls, cookies, header http, ai foi criado o base64url especifico para codificar coisas que serao transportadas via http 
+
+    - jwt não é criptografado, qualquer pessoa pode decodificar o token jwt. O que nao da pra fazer é alterar ele sem invalidar a assinatura que é feita com uma chave secreta
+
+
+Hash: 
+    - 
+
+    SHA-256 -> Secure Hash Algorithm -> gera um hash de 256 bits
+    HMAC -> Hash-based Message Authentication Code -> mistura a mensagem com uma chave secreta antes de calcular o hash.
+    HS256 -> HMAC + SHA-256
+    RS256 -> RSA Signature -> utiliza criptografia assimétrica.
+    ES256 -> usa curvas elípticas -> ECDSA + SHA256
+
+
+Qual usar?
+    HS256
+
+        Vantagens:
+
+        Muito rápido.
+        Fácil de implementar.
+        Excelente para aplicações monolíticas ou APIs simples.
+
+        Desvantagens:
+
+        Todos os serviços que validam o token precisam conhecer a mesma chave secreta.
+
+        É uma ótima escolha para uma aplicação como uma API Node.js + Express em que um único backend emite e valida os JWTs.
+
+    RS256
+
+        Vantagens:
+
+        Ideal para microsserviços.
+        Permite separar quem emite de quem valida.
+        Mais seguro quando vários sistemas precisam validar tokens.
+
+        Desvantagens:
+
+        Mais complexo de configurar.
+        Um pouco mais lento que HS256.
+
+        É muito comum em provedores de identidade como Auth0, Keycloak, Azure AD e Cognito.
+
+    ES256
+
+        Vantagens:
+
+        Assinaturas menores.
+        Excelente desempenho.
+        Muito utilizado em autenticação moderna (como Passkeys).
+
+        Desvantagens:
+
+        Implementação mais complexa.
+        Nem todas as bibliotecas antigas oferecem o mesmo nível de suporte.
+
+
+A diferença é importante:
+
+    - Criptografia → protege a confidencialidade dos dados (ninguém consegue ler sem a chave).
+
+    - Hash → gera um resumo (digest) dos dados.
+
+    - Assinatura digital → garante que os dados não foram alterados e que vieram de quem diz ter enviado.
+
+
+        
