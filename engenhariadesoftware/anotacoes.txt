@@ -127,3 +127,18 @@ Encryption → criptografia.
 Hashing → geração de hash.
 Signing → assinatura digital.
         
+
+Padrões de Design:
+
+    3 categorias:
+
+        1. Creational Patterns -> Explica como organizar e controlar a criação de objetos dentro do software
+
+            
+
+
+        2. Structural Patterns -> Explica como montar classes e objetos em estruturas maiores e mais complexas, garantindo flexibilidade e eficiência
+        3. Behavioral Patterns ->  Explica como os objetos de um sistema comunicam-se, distribuem responsabilidades e executam algoritmos de forma eficiente
+
+
+
