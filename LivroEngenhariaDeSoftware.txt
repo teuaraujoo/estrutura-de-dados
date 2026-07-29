@@ -58,3 +58,19 @@ Introducao:
 
 		Validação: estamos implementando o sistema correto? Isto é, aquele que os clientes ou o mercado está querendo.
 
+	### Manutenção e evolução de software
+
+		- corretiva -> tem como objetivo corrigir bus reportados por usuários ou outros devs
+
+		- preventiva -> tem como objetivo corrigir bugs que ainda não causaram falhas junto aos usuários do sistema
+
+		- adaptativa -> tem como objetivo adaptar um sistema a uma mudança em seu ambiente (seja de tecnlogia, legislação, regras de integração)
+
+		- refactorings -> são modificações/correções feitas visando a melhoria do código ou do projeto, mantendo assim, o comportamento do projeto.
+
+		- evolutiva -> realizar para incluir uma nova funcionalidade ou introduzir aperfeiçoamentos importantes em funcionalidades existentes.
+
+	## Gerência de Projetos
+
+		- stakeholders -> todas as partes interessadas no projeto. Aqueles que afetam ou são afetados pelo projeto, podendo ser pessoas ou organizações. (ex: Devs. clientes, gerentes, fornecedores, empresas subcontradas)
+
