@@ -116,3 +116,25 @@ Introducao:
 				- manutenibilidade
 				- testabildiade
 	
+Cap 1  - Processos de Software:
+
+	- Conjunto de passos, tarefas, eventos e práticas que devem ser seguidos por devs na produção de um sistema
+
+	- Processo é o conjunto de passos, etapas e tarefas que se usa para construir um software. 
+
+	- Já método, no nosso contexto, define e especifica um determinado processo de desenvolvimento (a palavra método tem sua origem no grego, onde significa caminho para se chegar a um objetivo)
+
+	OBS: Todo método de desenvolvimento deve ser entendido como um conjunto de recomendações; cabe a uma organização analisar cada uma e decidir se ela faz sentido no seu contexto.
+
+	## Método Ágil:
+		
+		- adoção de ciclos curtos e iterativos de desenvolvimento
+		- O sistema é implementado de forma gradativa
+		- Menor ênfase em documentação
+		- Menor ênfase em planos detalhados
+		Desenvolvimento em times pequenos,
+		- Ênfase em novas práticas de desenvolvimento (programação em pares, testes automatizados e integração contínua...)
+		-  o importante em desenvolvimento ágil é conseguir avançar, mesmo em ambientes com informações imperfeitas, parciais e sujeitas a mudanças.
+
+
+
