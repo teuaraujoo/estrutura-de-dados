@@ -138,3 +138,31 @@ Cap 1  - Processos de Software:
 
 
 
+	##  Extreme Programming:
+		- método leve recomendado para desenvolver software com requisitos vagos ou sujeitos a mudanças
+
+		- inicialmente definido de forma abstrata, usando-se de valores e princípios que devem fazer parte da cultura e dos hábitos de times de desenvolvimento de software. Depois, esses valores e princípios são concretizados em uma lista de práticas de desenvolvimento.
+
+		Valores: comunicação, simplicidade, feedback, coragem, respeito e qualidade de vida.
+
+		Princípios: humanidade, economicidade, benefícios mútuos, melhorias contínuas, falhas acontecem, baby steps e responsabilidade pessoal.
+
+		Práticas sobre o Processo de Desenvolvimento: representante dos clientes, histórias dos usuários, iterações, releases, planejamento de releases, planejamento de iterações, planning poker, slack.
+
+		Práticas de Programação: design incremental, programação pareada, desenvolvimento dirigido por testes (TDD), build automatizado, integração contínua.
+
+		Práticas de Gerenciamento de Projetos: métricas, ambiente de trabalho, contratos com escopo aberto.
+
+		- adota ciclos curtos e iterativos de desenvolvimento
+		- concede menos ênfase para documentação e para planos detalhados
+		- propõe que o design de um sistema também seja definido de forma incremental
+		- sugere que as equipes de desenvolvimento sejam pequenas.
+
+			### Valores: 
+				desenvolvimento de projetos de software seja norteado por três valores principais: comunicação, simplicidade e feedback. 
+
+				"é difícil desenvolver o sistema de software certo em uma primeira e única tentativa."
+
+				"Planeje-se para jogar fora partes de seu sistema, pois você fará isso."
+
+
