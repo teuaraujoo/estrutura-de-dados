@@ -164,5 +164,21 @@ Cap 1  - Processos de Software:
 				"é difícil desenvolver o sistema de software certo em uma primeira e única tentativa."
 
 				"Planeje-se para jogar fora partes de seu sistema, pois você fará isso."
+			
+			## Princípios:
 
+				- Humanidade -> fatores como expectativas, crescimento, motivação, transparência e responsabilidade são fundamentais para o sucesso de projetos de software.
+
+				- Economicidade -> Tem-se que ter consciência de que o outro lado, isto é, quem está pagando as contas do projeto, espera resultados econômicos e financeiros.
+
+				- Benefícios Mútuos -> decisões tomadas em um projeto de software têm que beneficiar múltiplos stakeholders.
+
+				- Melhorias Contínuas -> nenhum processo de desenvolvimento de software é perfeito. Por isso, é mais seguro trabalhar com um sistema que vai sendo continuamente aprimorado.
+					XP não recomenda investir um grande montante de tempo em um design inicial e completo. Em vez disso, o design do sistema também é incremental, melhorando a cada iteração.
+
+				- Falhas Acontecem: Falhas são esperadas em projetos de desenvolvimento de software. XP não advoga que essas falhas devem ser acobertadas. Porém, elas não devem ser usadas para punir membros de um time. Pelo contrário, falhas fazem parte do jogo, se um time pretende entregar software com rapidez.
+
+				- Baby Steps: É melhor um progresso seguro, testado e validado, mesmo que pequeno, do que grandes implementações com riscos de serem descartadas pelos usuários. Em resumo, o importante é garantir melhorias contínuas, não importando que sejam pequenas, desde que na direção correta.
+
+				- Responsabilidade Pessoal: Desenvolvedores devem ter uma ideia clara de seu papel e responsabilidade na equipe. O motivo é que responsabilidade não pode ser transferida, sem que a outra parte a aceite. 
 
