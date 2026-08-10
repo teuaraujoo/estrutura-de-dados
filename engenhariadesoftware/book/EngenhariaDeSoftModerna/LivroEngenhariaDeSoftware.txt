@@ -182,3 +182,40 @@ Cap 1  - Processos de Software:
 
 				- Responsabilidade Pessoal: Desenvolvedores devem ter uma ideia clara de seu papel e responsabilidade na equipe. O motivo é que responsabilidade não pode ser transferida, sem que a outra parte a aceite. 
 
+			## Práticas sobre o Processo de Desenvolvimento:
+				- Geralmente em uma equipe sempre vai ter um representantes dos clientes, que será responsável por entender a necessidade dos clientes -> esas necessidades se transforma em "histórias" que viram story points
+
+				- Os stroys points são resolvidos em iterações, que possuem uma duração fixa e bem denfida (1 a 4 semanas)
+
+				- As iterações fprma ciclos mais longos chamados de releases, de 2 a 3 mensagens
+
+				- A velocidade de um time é medida pela quantidade de sotry pointes que eles conseguem implementar em uma iteração
+
+				- Historias de uma iteração viram tarefas para os devs -> cada dev é responsável por 1 tarefa
+
+				** desenvolvedores não opinam sobre a ordem de implementação das histórias; isso é decidido pelo representante dos clientes, que deve ser alguém capacitado e com autoridade para definir o que é mais urgente e importante para a empresa que está contratando o desenvolvimento do sistema. **
+
+				Resumo das cartacterísticas: 
+
+					Definir a duração de uma iteração.
+
+					Definir o número de iterações de uma release.
+
+					Um conjunto de histórias, escritas pelo representante dos clientes.
+
+					Estimativas para cada história, feitas pelos desenvolvedores.
+
+					Definir a velocidade do time, isto é, o número de story points que ele consegue implementar por iteração.
+
+					--------------------------------------------------------------------
+
+					releases, que são conjuntos de iterações, com duração total de alguns meses.
+
+					iterações, que são conjuntos de tarefas resultantes da decomposição de histórias, com duração total de algumas semanas.
+
+					tarefas, com duração de alguns dias.
+				
+				Perguntas:
+
+					Quem de ver o representantes dos clientes? 
+						R - seja uma pessoa próxima do problema e o mais distante possível da solução. 
