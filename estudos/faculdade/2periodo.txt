@@ -1,0 +1,19 @@
+## Laboratório de programacação
+
+    Linguagens Interpretadas
+        - Interpreta linha por linha, ou seja, executa linha a linha, roda em tempo de execução.
+
+        - Mais flexivivel, roda uma parte de codigo, nao precisa de toda a aplicação pronta para rodar
+
+        - Mais dificil de debugar
+
+        Ex: JavaScirpt, PHP
+
+    Linguagens Compiladas
+        Compila toda a aplicação de uma vez, logo se tiver algum erro em alguma parte do sistema uma linguagem compilada nem chega a roda.
+
+        - Mais fácil de debugar, mais fácil de identificar erros, porém precisa de todo o código pronto para rodar, caso queira rodar uma parte não vai dar
+
+        ex: C, C++, Go, Rust
+
+    Python e Java possuem as 2 formas, elas podem ser interpretadas ou compiladas, depende da configuração escolhida
