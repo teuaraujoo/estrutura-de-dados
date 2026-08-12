@@ -139,6 +139,9 @@ Cap 1  - Processos de Software:
 
 
 	##  Extreme Programming:
+
+		- simplicidade é o valor de XP
+
 		- método leve recomendado para desenvolver software com requisitos vagos ou sujeitos a mudanças
 
 		- inicialmente definido de forma abstrata, usando-se de valores e princípios que devem fazer parte da cultura e dos hábitos de times de desenvolvimento de software. Depois, esses valores e princípios são concretizados em uma lista de práticas de desenvolvimento.
@@ -183,11 +186,12 @@ Cap 1  - Processos de Software:
 				- Responsabilidade Pessoal: Desenvolvedores devem ter uma ideia clara de seu papel e responsabilidade na equipe. O motivo é que responsabilidade não pode ser transferida, sem que a outra parte a aceite. 
 
 			## Práticas sobre o Processo de Desenvolvimento:
+
 				- Geralmente em uma equipe sempre vai ter um representantes dos clientes, que será responsável por entender a necessidade dos clientes -> esas necessidades se transforma em "histórias" que viram story points
 
 				- Os stroys points são resolvidos em iterações, que possuem uma duração fixa e bem denfida (1 a 4 semanas)
 
-				- As iterações fprma ciclos mais longos chamados de releases, de 2 a 3 mensagens
+				- As iterações formam ciclos mais longos chamados de releases, de 2 a 3 meses
 
 				- A velocidade de um time é medida pela quantidade de sotry pointes que eles conseguem implementar em uma iteração
 
@@ -219,3 +223,50 @@ Cap 1  - Processos de Software:
 
 					Quem de ver o representantes dos clientes? 
 						R - seja uma pessoa próxima do problema e o mais distante possível da solução. 
+
+			## Práticas de programação: 
+
+				- Design incremental:
+
+					A ideia é que o time deve reservar tempo para definir o design do sistema que está sendo desenvolvido. Porém, isso deve ser uma atividade contínua e incremental 
+
+					Argumenta-se que quando o design é confinado no início do projeto, correm-se diversos riscos, pois os requisitos ainda não estão totalmente claros para o time, e nem mesmo para o representante dos clientes. Por exemplo, pode-se supervalorizar alguns requisitos, que mais tarde irão se revelar menos importantes; 
+				
+				- Programacao em pares:
+
+					toda tarefa de codificação — incluindo implementação de uma nova história, de um teste, ou a correção de um bug — deve ser realizada por dois desenvolvedores trabalhando juntos, compartilhando o mesmo teclado e monitor.
+
+						Com programação em pares espera-se melhorar a qualidade do código e do design, pois "duas cabeças pensam melhor do que uma."
+
+						rogramação por pares pode ser usada para treinar desenvolvedores menos experientes em tecnologias de desenvolvimento
+
+						disseminar o conhecimento sobre o código, que não fica nas mãos e na cabeça de apenas um desenvolvedor. Por exemplo, não é raro encontrar sistemas nos quais um determinado desenvolvedor tem dificuldade para sair de férias, pois apenas ele conhece uma parte crítica do código
+					
+					existem também custos econômicos derivados da adoção de programação em pares, já que dois programadores estão sendo alocados para realizar uma tarefa que, a princípio, poderia ser realizada por apenas um.
+
+					muitos desenvolvedores não se sentem confortáveis com a prática. Para eles é desconfortável
+
+				- Propriedade Coletiva do Código:
+
+					A ideia é que qualquer desenvolvedor — ou par de desenvolvedores trabalhando junto — pode modificar qualquer parte do código, seja para implementar uma nova feature, para corrigir um bug ou para aplicar um refactoring.
+
+					e você descobriu um bug em algum ponto do código, vá em frente e corrija-o. Para isso, você não precisa de autorização de quem implementou esse código ou de quem realizou a última manutenção nele.
+
+				- Testes Automatizados:
+
+				- Build automatizados:
+					O objetivo é liberá-los das tarefas de rodar scripts, informar parâmetros de linhas de comando, configurar ferramentas, etc. Assim, eles podem focar apenas na implementação de histórias.
+
+					XP defende que o processo de build seja o mais rápido possível, para que os desenvolvedores recebam rapidamente feedback sobre possíveis problemas, como um erro de compilação.
+
+					recomenda-se um limite de 10 minutos para a conclusão de um build (no entanto, dependendo do tamanho do sistema e de sua linguagem de programação, pode ser difícil atender a esse limite)
+
+					sempre procurar automatizar e reduzir o tempo de build de um sistema.
+
+				- Integração contínua 
+
+					desenvolvedores devem integrar seu código sempre, se possível todos os dias, a fim de evitar conflitos 
+
+					O objetivo é evitar que desenvolvedores passem muito tempo trabalhando localmente, em suas tarefas, sem integrar o código. E, com isso, pelo menos diminuir as chances e o tamanho dos conflitos.
+
+			##  Práticas de Gerenciamento de Projetos:
