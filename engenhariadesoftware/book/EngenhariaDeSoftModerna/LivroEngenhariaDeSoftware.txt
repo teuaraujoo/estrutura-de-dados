@@ -270,3 +270,11 @@ Cap 1  - Processos de Software:
 					O objetivo é evitar que desenvolvedores passem muito tempo trabalhando localmente, em suas tarefas, sem integrar o código. E, com isso, pelo menos diminuir as chances e o tamanho dos conflitos.
 
 			##  Práticas de Gerenciamento de Projetos:
+
+				- XP defende que todos os desenvolvedores trabalhem em uma mesma sala, para facilitar comunicação e feedback.
+
+				-  jornadas de trabalho devem ser sempre próximas de 40 horas
+
+				- Métricas de Processo:
+					1. número de bugs em produção (que deve ser idealmente da ordem de poucos bugs por ano)
+					2. intervalo de tempo entre o início do desenvolvimento e o momento em que o projeto começar a gerar os seus primeiros resultados financeiros (que também deve ser pequeno, da ordem de um ano, por exemplo)
