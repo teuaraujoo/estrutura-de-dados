@@ -1011,3 +1011,26 @@ Mapped Types
 Conditional Types
 
 Infer
+
+O que é SDK 
+  - Kit de desenvolvimento de software
+  -  é um conjunto de ferramentas de criação específicas da plataforma para desenvolvedores.
+  - Os SDKs colocam tudo o que você precisa para desenvolver e executar software em um só lugar.
+
+    Ferramentes forneciadas por SDKS:
+      - Bibliotecas de APIBibliotecas de API
+      - Exemplos de código
+      - Depuradores
+      - Compiladores e intérpretes
+        O SDK fica responsável por várias coisas "chatas" por baixo dos panos:
+          montar requisições HTTP;
+          colocar headers;
+          autenticar;
+          serializar/deserializar dados;
+          lidar com erros;
+          validar parâmetros;
+          fornecer tipos TypeScript;
+          disponibilizar métodos prontos
+        
+O que é Boilerplate:
+  Boilerplate é o código "repetitivo" ou "padrão" que você precisa escrever para fazer alguma coisa funcionar, mas que não representa necessariamente a lógica principal da sua aplicação.

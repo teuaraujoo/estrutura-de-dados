@@ -278,3 +278,34 @@ Cap 1  - Processos de Software:
 				- Métricas de Processo:
 					1. número de bugs em produção (que deve ser idealmente da ordem de poucos bugs por ano)
 					2. intervalo de tempo entre o início do desenvolvimento e o momento em que o projeto começar a gerar os seus primeiros resultados financeiros (que também deve ser pequeno, da ordem de um ano, por exemplo)
+
+	## Scrum:
+	
+	método ágil, iterativo e incremental para gerenciamento de projetos
+
+	Papéis:
+		Times Scrum são formados por um Dono de Produto (PO), um Scrum Master e de três a nove desenvolvedores.
+
+		Dono do Produto tem exatamente o mesmo papel do Representante dos Clientes em XP, por isso não vamos explicar de novo a sua função em detalhes
+
+		Trata-se do especialista em Scrum do time, sendo responsável por garantir que as regras do método estão sendo seguidas.
+		
+	Principais Artefatos e Eventos:
+
+		Em Scrum, os dois artefatos principais são o Backlog do Produto e o Backlog do Sprint e os principais eventos são sprints e o planejamento de sprints
+
+		Backlog do Produto:
+			é uma lista de histórias, ordenada por prioridades. Constituem uma descrição resumida das funcionalidades que devem ser implementadas no projeto.
+		
+		Sprint: 
+			é o nome dado por Scrum para uma iteração
+			o desenvolvimento é dividido em sprints, de até um mês.
+			Ao final de um sprint, deve-se entregar um produto com valor tangível para o cliente. 
+
+			o adjetivo "potencial" não torna a entrada em produção obrigatória
+
+		Planejamento do Sprint:
+			é uma reunião na qual todo o time se reúne para decidir as histórias que serão implementadas no sprint que vai se iniciar. Portanto, ele é o evento que marca o início de um sprint.
+
+		Backlog do Sprint: 
+			Ele é uma lista com as tarefas do sprint, bem como inclui a duração das mesmas
