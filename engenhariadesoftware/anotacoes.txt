@@ -46,12 +46,19 @@ Identificadores/representacoes:
 
 
 O que o jwt utilzia?
+    definicao:
+        - jwt: Um JWT é um padrão para autenticação e troca de informações definido pela RFC7519.
 
     ele é dividio em 3 partes: HEADER.PAYLOAD.SIGNATURE
 
     - O header é um JSON simples.
+        - O Header é o cabeçalho do token, onde basicamente são informados dois dados: o `alg` que informa qual algoritmo é usado para criar a assinatura, e o `typ` que indica qual o tipo de token. 
+
     - o payload também é um json, os dois são codificados em base64URL
+        - É onde os dados são armazenados. Pode conter informações como o identificador do usuário, permissões, expiração do token, etc. 
+
     -  A signature, é codificada com algum algoritimo (H256, RS256) e depois esses bytes gerados sao representados em base64URL
+        - A assinatura do token (signature) é composta pela codificação do header e do payload combinados a uma chave secreta, utilizando o algoritmo especificado no cabeçalho. 
 
     - base64URL -> o base64 normal utiliza caracteres que nao podem ser usados em urls, cookies, header http, ai foi criado o base64url especifico para codificar coisas que serao transportadas via http 
 
@@ -115,7 +122,22 @@ Qual usar?
 
 A diferença é importante:
 
-    - Criptografia → protege a confidencialidade dos dados (ninguém consegue ler sem a chave).
+    - Criptografia → protege a confidencialidade dos dados (ninguém consegue ler sem a chave). Um processo de conversão de dados de um modo legível, facilmente acessível e decodificado, para uma forma encriptada e não decodificável. No formato não decodificável, mesmo que seja obtido acesso ao dado, não será possível realizar a leitura sem o acesso à chave de encriptação.
+
+        - SIMÉTRICA: Esse método usa as mesmas chaves tanto para criptografar dados inseridos pela pessoa usuária em um formulário, como para descriptografá-los em um sistema ou dispositivo autorizado.
+
+        - ASSIMÉTRICA: Esse tipo de criptografia adota pares de chaves, sendo uma pública e uma privada, para criptografar e descriptografar dados.
+                Na prática, funciona assim: o remetente prepara o e-mail e utiliza a chave pública do destinatário ou destinatária para criptografá-lo.
+
+                Por sua vez, o (a) destinatário (a) somente conseguirá acessar o conteúdo do e-mail após realizar o processo de descriptografia, usando sua própria chave privada.
+
+                Desse modo, nenhum dispositivo ou pessoa usuária no meio do caminho conseguirá ter acesso à mensagem encaminhada.
+
+                - Assinatura Digital: Uma aplicação prática da criptografia assimétrica são os certificados digitais. Os certificados digitais são uma tecnologia de autenticação da identidade digital de uma pessoa, organização ou mesmo um dispositivo eletrônico, garantindo maior segurança na realização de diversas transações online, como operações bancárias, assinatura de documentos, envio de declarações e emissão de procurações.
+
+                        Esses certificados são documentos eletrônicos que contêm dados sobre a identidade da entidade e chaves criptográficas (uma pública e uma privada) para realizar as operações no ambiente digital.
+
+
 
     - Hash → gera um resumo (digest) dos dados.
 
