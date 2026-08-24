@@ -1034,3 +1034,11 @@ O que é SDK
         
 O que é Boilerplate:
   Boilerplate é o código "repetitivo" ou "padrão" que você precisa escrever para fazer alguma coisa funcionar, mas que não representa necessariamente a lógica principal da sua aplicação.
+
+
+Edge Funcitons: https://maximodomarketing.com.br/blog/edge-functions-quando-vale-performance/
+  Edge function = código JavaScript/TypeScript (ou WebAssembly) que roda em centenas de data centers próximos do usuário final, em vez de servidor único.
+
+  Servidor tradicional: cliente brasileiro pede → vai pra Virginia (180ms) → volta (180ms) = 360ms ida e volta
+Edge function: cliente brasileiro pede → roda em São Paulo (10ms) → volta (10ms) = 20ms
+

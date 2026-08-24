@@ -1,0 +1,11 @@
+teste ab:
+
+é uma metodologia para comparar duas versões de uma página da web ou aplicativo para determinar qual delas apresenta melhor desempenho. Funciona exibindo duas variantes de uma página aos usuários aleatoriamente e usando análise estatística para determinar qual variação alcança melhores resultados para suas metas de conversão
+
+
+Criar duas versões de uma página: a original (controle ou A) e uma versão modificada (variação ou B).
+Dividir aleatoriamente seu tráfego entre essas versões.
+Medir o engajamento do usuário por meio de um painel de controle
+Analisar os resultados para determinar se as alterações tiveram efeitos positivos, negativos ou neutros.
+
+As alterações que você testa podem variar de ajustes simples (como um título ou botão) a reformulações completas da página. Ao medir o impacto de cada alteração, o teste A/B transforma a otimização de sites de palpites em decisões baseadas em dados, mudando o foco de "achamos" para "sabemos com certeza".
