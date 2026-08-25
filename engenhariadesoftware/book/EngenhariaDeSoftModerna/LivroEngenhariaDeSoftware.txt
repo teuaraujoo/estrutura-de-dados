@@ -309,3 +309,16 @@ Cap 1  - Processos de Software:
 
 		Backlog do Sprint: 
 			Ele é uma lista com as tarefas do sprint, bem como inclui a duração das mesmas
+		
+		Daily: 
+			Scrum propõe que sejam realizadas Reuniões Diárias, de cerca de 15 minutos, das quais devem participar todos os membros do time
+
+			Nelas, cada membro do time deve responder a três perguntas: (1) o que ele fez no dia anterior; (2) o que ele pretende fazer no dia corrente; (3) e se ele está enfrentando algum problema mais sério, isto é, um impedimento, na sua tarefa. 
+		
+		Revisão do sprint:
+			é uma reunião para mostrar os resultados de um sprint. 
+			
+			Durante essa reunião o time demonstra, ao vivo, o produto para os clientes. Como resultado, todas as histórias do sprint podem ser aprovadas pelo Dono do Produto.
+
+		Retrospectiva:
+			Trata-se de uma reunião do time Scrum, com o objetivo de refletir sobre o sprint que está terminand
