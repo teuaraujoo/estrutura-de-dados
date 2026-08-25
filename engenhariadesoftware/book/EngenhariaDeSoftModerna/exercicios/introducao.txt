@@ -24,4 +24,4 @@ if "Carro sendo testado em um laboratório"
    "Emita poluentes dentro das normas"
 else 
    "Emita poluentes fora das normas"
-O que você faria se seu chefe pedisse para escrever um if como o acima? Para mais informações sobre esse episódio, consulte essa página da Wikipédia.
+O que você faria se seu chefe pedisse para escrever um if como o acima?
