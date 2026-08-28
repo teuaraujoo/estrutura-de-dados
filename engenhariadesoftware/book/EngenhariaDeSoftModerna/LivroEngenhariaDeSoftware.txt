@@ -321,4 +321,25 @@ Cap 1  - Processos de Software:
 			Durante essa reunião o time demonstra, ao vivo, o produto para os clientes. Como resultado, todas as histórias do sprint podem ser aprovadas pelo Dono do Produto.
 
 		Retrospectiva:
-			Trata-se de uma reunião do time Scrum, com o objetivo de refletir sobre o sprint que está terminand
+			Trata-se de uma reunião do time Scrum, com o objetivo de refletir sobre o sprint que está terminando
+
+	## Kanban
+		- significa cartão visual/cartão de sinalização
+
+		- usado para denotar o processo de producção just-in-time 
+
+		- "Kanban é um método que ajuda times de desenvolvimento a trabalhar em ritmo sustentável, eliminando desperdício, entregando valor com frequência e fomentando uma cultura de melhorias contínuas"
+	
+		- Kanban é dividido em colunas:
+			- Backlog do produto
+			- As demais colunas são os passos que devem ser seguidos para transformar uma história do usuário em uma funcionalidade executável
+
+			-  A ideia, portanto, é que as histórias sejam processadas passo a passo, da esquerda para a direita, como em uma linha de montagem.
+
+			- As tarefas concluídas em um passo estão aguardando serem puxadas, por um membro do time, para o próximo passo. Por isso, Kanban é chamado de um sistema pull.
+
+			- Times kanban são auto-organizáveis e cross-funcionais, que quer dizer que qualquer um tem autonomia para dizer qual tarefa deve ser puxada para o proximo passo e devems ser capazes de realizar todos os passos do Quadro Kanban.
+
+		WIP: o objetivo dos limites WIP é evitar que os times Kanban fiquem sobrecarregados de trabalho. Quando um desenvolvedor tem muitas tarefas para realizar — porque os limites WIP não estão sendo respeitados — a tendência é que ele não consiga concluir nenhuma dessas tarefas com qualidade.
+
+			- Serve para uso interno do time e, mais importante ainda, para uso externo. Ou seja, elas são o instrumento de que um time dispõe para recusar trabalho extra que está sendo "empurrado" de cima para baixo por gerentes da organização, por exemplo
