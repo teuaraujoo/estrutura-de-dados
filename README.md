@@ -20,8 +20,10 @@ Aqui estão registrados materiais relacionados a:
 - complexidade de algoritmos;
 - lógica de programação;
 - exercícios práticos;
+- engenharia de software;
+- arquitetura de software;
 - estudos pessoais e referências de aprendizado.
 
 ## Finalidade
 
-Esse diretório funciona como um caderno de estudos, ajudando a organizar ideias, revisar conceitos e acompanhar o progresso ao longo do aprendizado em estrutura de dados.
+Esse diretório funciona como um caderno de estudos, ajudando a organizar ideias, revisar conceitos e acompanhar o progresso ao longo do aprendizado em desenvolvimento de software.
