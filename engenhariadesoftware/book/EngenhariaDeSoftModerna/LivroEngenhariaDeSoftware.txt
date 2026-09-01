@@ -356,4 +356,8 @@ Cap 1  - Processos de Software:
 
 	## Outros métodos iterativos:
 
-		
+Cap 2 - Requisitos de Software	
+
+	- Requisitos definem o que um sistema deve fazer e sob quais restrições
+
+	- Requisitos funcionais, na maioria das vezes, são especificados em linguagem natural. Por outro lado, requisitos não-funcionais são especificados de forma quantitativa usando-se métricas, como aquelas descritas na próxima tabela.
