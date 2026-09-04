@@ -360,4 +360,21 @@ Cap 2 - Requisitos de Software
 
 	- Requisitos definem o que um sistema deve fazer e sob quais restrições
 
-	- Requisitos funcionais, na maioria das vezes, são especificados em linguagem natural. Por outro lado, requisitos não-funcionais são especificados de forma quantitativa usando-se métricas, como aquelas descritas na próxima tabela.
+	- Requisitos funcionais, na maioria das vezes, são especificados em linguagem natural. Por outro lado, requisitos não-funcionais são especificados de forma quantitativa usando-se métricas.
+
+	## Histórias do usuário
+
+		- História de Usuário = Cartão + Conversas + Confirmação
+
+			- Cartão -> usado pelos clientes para escrever, na sua linguagem e em poucas sentenças, uma funcionalidade que esperam ver implementada no sistema.
+
+			- Conversas -> entre clientes e desenvolvedores, por meio das quais os clientes explicam e detalham o que escreveram em cada cartão
+
+			- Confirmação, que é basicamente um teste de alto nível — de novo especificado pelo cliente — para verificar se a história foi implementada conforme esperado
+		
+		- Histórias devem ser independentes
+		- Histórias devem ser abertas para negociação
+		- Histórias devem agregar valor para o negócio dos clientes
+		- Deve ser viável estimar o tamanho de uma história 
+		- Histórias devem ser sucintas e pequenas -> Assumindo-se que um sprint tem duração máxima de um mês, deve ser possível implementar as histórias do topo do backlog em menos de uma semana.
+		- Histórias devem ser testáveis,
