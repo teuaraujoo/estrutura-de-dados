@@ -377,4 +377,22 @@ Cap 2 - Requisitos de Software
 		- Histórias devem agregar valor para o negócio dos clientes
 		- Deve ser viável estimar o tamanho de uma história 
 		- Histórias devem ser sucintas e pequenas -> Assumindo-se que um sprint tem duração máxima de um mês, deve ser possível implementar as histórias do topo do backlog em menos de uma semana.
-		- Histórias devem ser testáveis,
+		- Histórias devem ser testáveis.
+
+		- Tarefas para aquisição de conhecimento são chamadas de spikes.
+
+	## Casos de uso	
+
+		- São documentos textuais de especificação de requisitos
+		- o ator é uma entidade externa ao sistema.
+
+		-  Fluxo normal: descreve um cenário em que tudo dá certo.
+		- Fluxo alternativo: Representam alternativas de execução de um passo normal ou então situações de erro. 
+
+		- todo caso de uso deve ter um nome, cuja primeira palavra deve ser um verbo no infinitivo.
+
+		- As ações de um caso de uso devem ser escritas em uma linguagem simples e direta. 
+		- Casos de uso devem ser pequenos, com poucos passos, principalmente no fluxo normal, para facilitar o entendimento
+		- Casos de uso não são algoritmos escritos em pseudo-código.
+		- Casos de uso não devem tratar de aspectos tecnológicos ou de design.
+		- Padronize o vocabulário adotado nos casos de uso.
