@@ -396,3 +396,24 @@ Cap 2 - Requisitos de Software
 		- Casos de uso não são algoritmos escritos em pseudo-código.
 		- Casos de uso não devem tratar de aspectos tecnológicos ou de design.
 		- Padronize o vocabulário adotado nos casos de uso.
+
+	## MVP -> Produto Minímo Viável
+
+		- se é para um sistema falhar — por não ter sucesso, usuários ou mercado — é melhor falhar rapidamente, pois o desperdício de recursos será menor.
+
+		- Construção e validação de MVPs são divididos em 3 passos: 
+				1. Construir -> tem-se uma ideia de produto e então implementa-se um MVP para testá-la.
+
+				2. Medir -> o MVP é disponibilizado para uso por clientes reais com o intuito de coletar dados sobre a sua viabilidade. 
+
+				3. Aprender -> as métricas coletadas são analisadas e geram o que se denomina de aprendizado validado 
+
+
+				Com isso pode-se concluir 3 coisas:
+
+    				Pode-se concluir que ainda são necessários mais testes com o MVP, possivelmente alterando seu conjunto de requisitos, sua interface com os usuários ou o mercado alvo. Logo, repete-se o ciclo, voltando para o passo construir.
+
+    				Pode-se concluir que o teste foi bem sucedido e, portanto, achou-se um mercado para o sistema (um market fit). Neste caso, é hora de investir mais recursos para implementar um sistema com um conjunto mais robusto e completo de funcionalidades.
+
+    				Por fim, pode-se concluir que o MVP falhou, após várias tentativas. Então, restam duas alternativas: (1) perecer, isto é, desistir do empreendimento, principalmente se não existirem mais recursos financeiros para mantê-lo vivo; ou (2) realizar um pivô, isto é, abandonar a visão original e tentar um novo MVP, com novos requisitos e para um novo mercado, mas sem esquecer o que se aprendeu com o MVP anterior.
+
