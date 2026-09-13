@@ -1,0 +1,112 @@
+Arquiteturas
+
+
+
+Problema da Arquitetura em camadas tradicional ->  Na arquitetura em camadas tradicional, o fluxo de dependência é costuma a ser de fora pra dentro: a camada de interface (UI) interage com a lógica de negócio, que por sua vez depende da camada de dados. Esse modelo cria acoplamento direto entre as camadas, dificultando a substituição de tecnologias ou a realização de testes isolados.
+
+OBS: As camadas de dentro nunca usam as camadas de fora. As camadas mais externas conhecem as camadas mais internas, mas o contrário não acontece.
+
+OBS_2: Onion arch foca em serviços em quanto a clean arch foca em casos de uso
+
+
+### Clean Arch 
+
+Resumindo, clean arch é para é utilizado para separar as regras de negócio dos detalhes externos mantendo o núcleo da aplicação independente (para que sua aplicação não fique totalmente dependente da implementação e das tecnologias/infraestruturas usadas). Para isso, ele possui algumas regras/camadas, utilizando bastante princípios SOLID (regras) e as camadas (Application Business Rules, Enterprise Business Rules, Interface Adapters e Frameworks e Drivers).
+
+Sendo que a application são os casos de uso (ações do sistema), o enterprise são as regras de negócio sendo que a application pode utilizar a enterprise (use case orquestra as regras do domínio), a interface são as portas de entrada e podem adaptar tipos externos para internos e internos para externos e por último os frameworks e drivers são a implementação e a comunicação direta com toda infraestrutura utilizada (cloudflare, postgres, framework -> detalhes da aplicação)
+
+Enterprise
+"Quais são as regras do negócio?"
+
+Application
+"O que o sistema faz?"
+
+Adapters
+"Como traduzo entre o sistema e o mundo externo?"
+
+Frameworks e Drivers
+"Com quais tecnologias concretas faço isso?" 
+
+
+Enterprise business rules:
+
+são as regras essenciais da empresa ou do domínio, independentemente da tecnologia.
+Exemplo: “usuário possui email único” faz parte de uma regra de negócio do sistema, mas ela fica formalizada no caso de uso e na entidade.
+Em termos de arquitetura limpa, elas ficam no domínio.
+
+Application business rules:
+
+são as regras do fluxo do software para atingir o objetivo do caso de uso.
+Exemplo: “verificar duplicidade de email antes de criar o usuário” e “delegar a persistência ao repositório” pertence ao caso de uso.
+
+
+### Onion Arch
+
+Em vez de organizar o sistema a partir das camadas externas, ela o estrutura de dentro pra fora, tendo núcleo do domínio como centro.
+
+As camadas internas contêm as regras de negócios puras e não conhecem nada sobre a infraestrutura ou interface. Já as camadas mais externas dependem das internas, atuando apenas como meios de entrada (UI, APIs) ou implementação de detalhes como banco de dados e/ou serviços externos.
+
+### Hexagonal Arch
+
+No centro ficam o domínio e os casos de uso, que se comunicam com o mundo externo por meio de portas, isto é, contratos definidos pela aplicação. As portas de entrada representam as ações oferecidas pelo sistema e são chamadas por adapters de entrada, como controllers HTTP, consumidores de filas ou comandos de terminal. Já as portas de saída representam recursos necessários à aplicação, como repositórios, serviços de e-mail e gateways de pagamento, sendo implementadas por adapters de saída, como PostgreSQL, SendGrid ou Stripe. Dessa forma, o núcleo não conhece as tecnologias concretas, que podem ser substituídas sem alterar as regras centrais. 
+
+Frameworks como Spring Boot e NestJS facilitam essa organização por meio da injeção de dependências, que conecta as portas às suas implementações, mas não tornam um projeto automaticamente hexagonal: a separação depende das decisões arquiteturais da equipe.
+
+
+Driving side: algo externo “dirige” ou aciona a aplicação.
+Driven side: a aplicação “dirige” ou aciona algo externo.
+
+Driving side — lado que aciona a aplicação
+
+	O driving side contém os elementos externos que iniciam uma ação no sistema.
+
+	Exemplos:
+		- controller HTTP;
+		- resolver GraphQL;
+		- consumidor de mensagens;
+		- interface de linha de comando;
+		- tela desktop;
+		- tarefa agendada;
+		- outro sistema fazendo uma requisição.
+
+	Esses elementos utilizam uma porta de entrada, também chamada de input port ou primary port.
+
+Driven Side:
+	
+	O driven side contém os elementos externos que a própria aplicação precisa acionar para completar um caso de uso.
+
+	Exemplos:
+		- banco de dados;
+		- gateway de pagamento;
+		- serviço de envio de e-mail;
+		- armazenamento de arquivos;
+		- cache;
+		- serviço externo;
+		- produtor de mensagens;
+		- sistema de notificações.
+
+	A aplicação acessa esses elementos por meio de uma porta de saída, também chamada de output port ou secondary port.
+
+
+
+Dúvidas:
+
+Qual a diferença de serviço de domínio  e serviço de aplicação?
+
+	Um Application Service responde:
+	“Qual ação o sistema executa?”
+
+	Um Domain Service responde:
+	“Qual regra de negócio não pertence claramente a uma única entidade?
+
+Quando usar clean arch e quando usar onion arch?
+
+
+Quando usar Hexagonal?
+
+	quando existem várias formas de entrada ou diferentes integrações de saída
+
+	ex: HTTP + GraphQL + filas + tarefas agendadas
+	EX: PostgreSQL + gateway de pagamento + e-mail + storage + APIs externas
+
+
