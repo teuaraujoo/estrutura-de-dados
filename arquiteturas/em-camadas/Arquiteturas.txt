@@ -101,7 +101,16 @@ Qual a diferença de serviço de domínio  e serviço de aplicação?
 
 Quando usar clean arch e quando usar onion arch?
 
+	Use Clean Architecture quando:
+		- o sistema possui muitos casos de uso bem definidos;
+		- a complexidade está nos fluxos e ações da aplicação;
 
+	Use Onion Architecture quando:
+		- o domínio possui muitas regras e conceitos complexos;
+		- entidades e Value Objects têm comportamentos importantes;
+		- existem regras envolvendo várias entidades;
+		- o projeto utiliza bastante DDD;
+		
 Quando usar Hexagonal?
 
 	quando existem várias formas de entrada ou diferentes integrações de saída
