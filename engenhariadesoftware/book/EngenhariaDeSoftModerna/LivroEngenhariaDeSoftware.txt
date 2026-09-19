@@ -422,3 +422,19 @@ Cap 2 - Requisitos de Software
 		- Para rodar testes A/B, precisamos de uma métrica para medir os ganhos obtidos com a versão de tratamento. Essa métrica é genericamente chamada de taxa de conversão.
 
 		- Teste A/B é modelado como um Teste de Hipótese. Nesse tipo de teste, partimos de uma Hipótese Nula, que representa o "status quo" do sistema. Isto é, a Hipótese Nula assume que nada vai mudar e que, portanto, a versão B não é melhor do que a versão atual do sistema. Por outro lado, a hipótese que muda o "status quo" é chamada de Hipótese Alternativa. Por convenção, a Hipótese Nula é representada por H0 e a Hipótese Alternativa por H1. 
+	
+## Integridade Conceitual
+	
+	- um sistema não pode ser um amontoado de funcionalidades, sem coerência e coesão entre elas.
+	- facilita o uso e entendimento de um sistema por parte de seus usuários
+	
+	_ "Integridade conceitual é a consideração mais importante no projeto de sistemas. É melhor um sistema omitir algumas funcionalidades e melhorias anômalas, de forma a oferecer um 		conjunto coerente de ideias, do que oferecer diversas ideias interessantes, mas independentes e descoordenadas."
+
+	Problemas de falta de integridade: 
+		Quando uma parte do sistema usa um padrão de nomes para variáveis (por exemplo, camel case, como em notaTotal), enquanto em outra parte usa-se um outro padrão (por exemplo, 		snake case, como em nota_total).
+
+		Quando uma parte do sistema usa um determinado framework para manipulação de páginas Web, enquanto em outra parte usa-se um segundo framework ou então uma versão diferente do 		primeiro framework.
+
+		Quando em uma parte do sistema resolve-se um problema usando-se uma estrutura de dados X, enquanto que, em outra parte, um problema parecido é resolvido por meio de uma 		estrutura Y.
+
+		Quando funções de uma parte do sistema que precisam de uma determinada informação — por exemplo, o endereço de um servidor — a obtém diretamente de um arquivo de 			configuração. Porém, em outras funções, de outras partes do sistema, a mesma informação deve ser passada como parâmetro.
