@@ -164,3 +164,69 @@ Padrões de Design:
 
 
 
+DDD - Domain Driven Design 
+    -  conjunto de princípios para o desenvolvimento de sistemas de software onde o domínio (a lógica de negócios) é a principal preocupação.
+
+    Características
+
+    1. Domínio
+        - O espaço de problemas que o software aborda.
+        Exemplo : Em um sistema de e-commerce, o domínio pode incluir:
+        - Encomenda
+        - Pagamentos
+        - Envio
+        - Inventário
+
+    2. Linguagem Onipresente
+        - Linguagem compartilhada usada por desenvolvedores, especialistas em domínio e partes interessadas para descrever o domínio de forma consistente.
+
+    3. Contexto Limitado
+
+        - Um limite específico onde um modelo de domínio é consistente e inequívoco.
+    
+    4. Modelo do domínio 
+
+        - O modelo conceitual do domínio que inclui tanto o comportamento quanto os dados, expressos em código.
+
+        Exemplo:
+            Um Orderobjeto que inclui lógica de negócios como:
+            - - addItem()
+            - - calculateTotal()
+            - - placeOrder()
+
+    5. Entidades
+
+        - Um objeto com uma identidade e ciclo de vida únicos.
+
+        - Uma entidade do cliente com um único customerId. Tem atributos como namee emaile comportamentos como updateAddress(). O Cliente persiste entre os pedidos e é rastreado ao longo do tempo.
+
+    6. Objetos de valor
+
+        - Objetos imutáveis são definidos por seus atributos, sem uma identidade única. São atributos das Entidades.
+
+        - Exemplo : An Addressobjeto de valor com atributos como rua, cidade e código postal. Dois endereços com valores idênticos são considerados iguais, e é imutável para garantir a consistência.
+
+    7. Agregados
+    
+        - Um conjunto de entidades e objetos de valor com uma entidade como raiz agregada, garantindo consistência.
+
+        - Order é uma raiz agregada. Ele contémOrderItems, e todas as mudanças devem passar Order.
+
+    8. Mapeamento de contexto
+        - Define relações entre contextos limitados para gerenciar a integração.
+
+        - Encomenda e Envio têm modelos diferentes, mas devem interagir.
+
+    9. Services
+    10. Repositories
+    11. Eventos de domínio (~= caso de uso)
+
+    12. Raiz agregadora 
+
+        -  uma entidade principal usada para garantir a integridade e a consistência dos dados de um grupo de objetos relacionados
+
+        -  é a entidade "mãe" ou o único ponto de entrada para esse grupo.
+
+    13. Agregados
+
+        -  É um conjunto de objetos de domínio (entidades e objetos de valor) que são tratados como uma única unidade.
