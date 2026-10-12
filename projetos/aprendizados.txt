@@ -1042,3 +1042,125 @@ Edge Funcitons: https://maximodomarketing.com.br/blog/edge-functions-quando-vale
   Servidor tradicional: cliente brasileiro pede → vai pra Virginia (180ms) → volta (180ms) = 360ms ida e volta
 Edge function: cliente brasileiro pede → roda em São Paulo (10ms) → volta (10ms) = 20ms
 
+
+
+
+
+========================================================================================================
+
+
+
+
+
+cURL -> O cURL é uma ferramenta de linha de comando usada para transferir dados entre um computador e um servidor por meio de URLs
+
+Buffer -> é uma representação de dados binários brutos na memória, enquanto o Base64 é um formato de codificação que transforma esses dados binários em uma string de tex
+
+lock pessimista (bloqueio pessimista) ✅ -> é uma estratégia de controle de concorrência em bancos de dados que trava o registro no momento da leitura para impedir que outros processos o alterem até que a transação seja concluída
+
+
+
+
+
+- Job x Worker (https://dev.to/yuripeixinho/o-que-sao-jobs-na-programacao-27kk) ✅ -> 
+	um job é simplesmente uma tarefa que precisa ser executada. A diferença fundamental é que código comum executa junto com quem 	pediu. Um job executa separado, no seu próprio tempo. Qualquer operação que você quer executar de forma controlada, separada do 	fluxo principal da aplicação.
+
+	Todo job tem três características:
+
+		O que fazer — o código que será executado, normalmente um método. Ex: public void EnviarEmailConfirmacao(int pedidoId)
+		Quando fazer — agora, daqui a 30 minutos, todo dia às 9h:
+		O que fazer se falhar — tentar de novo? Quantas vezes? Notificar alguém?
+
+	Um worker é uma thread que fica olhando a fila de jobs e os executa.
+	
+		O que fazer se falhar — tentar de novo? Quantas vezes? Notificar alguém?
+
+		O número de workers define o paralelismo real do sistema. Com 5 workers, você processa até 5 jobs simultaneamente. Mais 		workers significa mais throughput, mas também mais pressão sobre recursos compartilhados (banco, memória, CPU).
+
+		Workers podem ser thread-based (dentro do mesmo processo da aplicação) ou process-based (processos separados, como no 			modelo do Celery com Python).
+
+Storage -> camada de persistência que conecta quem enfileira jobs com quem os executa. 
+
+	O storage precisa resolver alguns problemas não triviais:
+	
+		Mutual exclusion — garantir que dois workers não peguem o mesmo job
+		Visibilidade — jobs precisam ficar "invisíveis" enquanto estão sendo processados
+		Reentrada — se um worker morrer no meio, o job volta à fila
+		Scheduling — suporte a jobs agendados para o futuro
+
+	Bancos relacionais, Redis, SQS, Kafka — qualquer coisa pode ser storage, desde que resolva esses problemas
+
+Servidor -> O servidor" nesse contexto é uma instância da aplicação que tem workers ativos. É o processo que efetivamente consome a fila.
+
+	A separação entre quem enfileira e quem processa é intencional e poderosa. Você pode ter:
+
+	Aplicação web que só enfileira (sem workers)
+	Processo dedicado que só processa (sem receber requisições HTTP)
+	Ou os dois juntos, no mesmo processo
+
+	Múltiplos servidores apontando pro mesmo storage formam um pool distribuído de workers — é assim que você escala horizontalmente o 	processamento.
+
+BullMQ -> é uma biblioteca de filas de mensagens e processamento de jobs em segundo plano de alto desempenho, construída principalmente sobre o Redis
+
+Paralelismo de um sistema ✅ -> é a capacidade de executar duas ou mais tarefas ou instruções ao mesmo tempo, de forma literal e simultânea, utilizando múltiplos núcleos de processamento (CPUs) ou processadores físicos
+
+BullMQ responde:
+Quando e quem executa o trabalho?
+
+Redis responde:
+Onde ficam o estado e coordenação da fila?
+
+Worker responde:
+Como executar o trabalho?
+
+Distributed Lock responde:
+Quem pode mexer nesse recurso agora?
+
+Idempotência responde:
+E se tentarmos executar isso novamente?
+
+Banco/transaction responde:
+Como manter os dados consistentes?
+
+
+- limits e offset ✅ -> onde definimos o tamanho da página e qual página queremos acessar.
+
+- taxa de intermediação ✅ -> é o valor cobrado por uma empresa ou profissional para mediar uma transação ou serviço entre duas partes
+
+- SMTP ✅ -> O Simple Mail Transfer Protocol (SMTP) é o protocolo padrão da internet usado exclusivamente para enviar e encaminhar e-mails entre servidores e dispositivos
+
+- WSDL ✅ -> (Web Services Description Language) é uma linguagem baseada em XML usada para descrever e documentar Web Services do tipo SOAP, funcionando como um contrato entre o sistema que oferece o serviço e o cliente que vai consumi-lo
+
+- DICT ✅ -> Diretório de Identificadores de Contas Transacionais. Ele funciona como uma espécie de diretório das chaves Pix. É nele que ficam relacionadas informações como chave Pix, CPF/CNPJ, instituição, agência, conta e tipo de conta.
+
+- SPI ✅ -> Sistema de Pagamentos Instantâneos. Ele é a infraestrutura onde acontece de fato a liquidação do dinheiro entre as instituições financeiras. Operado pelo Banco Central e faz essa liquidação transação por transação, em tempo real.
+
+- cherry-pick ✅ -> é um comando que permite copiar um commit específico de uma branch e aplicá-lo em outra, sem precisar fazer um merge 			ou rebase completo da branch de origem
+
+- proxy moxy ✅ -> uma camada intermediária entre sua aplicação e outro serviço que consegue interceptar, redirecionar ou até simular 			respostas HTTP.
+		
+		tipo de servidor proxy HTTP programável ou ferramenta de simulação (mock) usada por desenvolvedores para interceptar, 			modificar ou simular requisições de 		rede e APIs
+
+- dependência modular ✅ -> quando um módulo depende de outro módulo para conseguir funcionar.
+
+JOIN (SQL) - > operação sql que permite combinar dados de duas ou mais tabelas com base em  uma condição de relacionamento entre elas, através de uma chave primária em uma tabela e uma chave estrangeira na outra
+
+INNER JOIN -> Retorna apenas as linhas que possuem correspondência nas duas tabelas envolvidas no JOIN
+
+LEFT JOIN -> Retorna todas as linhas da tabela da esquerda, mesmo que não haja correspondência na tabela da direita
+
+RIGHT JOIN -> Retorna todas as linhas da tabela da direita, mesmo que não haja correspondência na tabela da esquerda
+
+FULL JOIN -> Retorna todas as linhas de todas as tabelas independente de ter correspondências entre elas
+
+Retry com backoff -> é uma estratégia de programação usada para tentar novamente uma operação que falhou (como uma requisição a um servidor ou banco de dados), aumentando o tempo de espera de forma progressiva entre cada nova tentativa.
+
+	Retry (Nova tentativa): Se a operação falhar devido a um erro temporário (instabilidade na rede ou servidor sobrecarregado), o 	sistema repete a chamada automaticamente em vez de desistir de imediato.
+
+Parametrizar -> significa configurar um sistema, programa ou modelo definindo regras, limites e variáveis para que ele funcione de acordo 	com uma necessidade específica, sem alterar sua estrutura original
+	Tirar algo que era fixo ("chumbado" ou hardcoded) e torná-lo flexível e configurável através de parâmetros.
+
+Sandbox -> Ambiente isolado e seguro para testes que simula o ambiente de produção
+	Você faz requisições reais à API, mas os dados são fictícios
+	Usado durante o desenvolvimento para testar integrações sem risco
+	Normalmente tem URL própria (ex.: api.sandbox.banco.com) e credenciais separadas
