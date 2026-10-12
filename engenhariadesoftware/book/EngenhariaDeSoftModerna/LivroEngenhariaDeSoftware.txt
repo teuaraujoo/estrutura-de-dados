@@ -442,3 +442,15 @@ Cap 4 - Princípios de Projeto
 			Quando em uma parte do sistema resolve-se um problema usando-se uma estrutura de dados X, enquanto que, em outra parte, um problema parecido é resolvido por meio de uma 		estrutura Y.
 
 			Quando funções de uma parte do sistema que precisam de uma determinada informação — por exemplo, o endereço de um servidor — a obtém diretamente de um arquivo de 			configuração. Porém, em outras funções, de outras partes do sistema, a mesma informação deve ser passada como parâmetro.
+
+	## Ocultamento de informação
+
+		Desenvolvimento em paralelo. Suponha que um sistema X foi implementado por meio de classes C1, C2, …, Cn. Quando essas classes ocultam suas principais informações, fica mais fácil implementá-las em paralelo, por desenvolvedores diferentes. Consequentemente, teremos uma redução no tempo total de implementação do sistema.
+
+		Flexibilidade a mudanças. Por exemplo, suponha que descobrimos que a classe Ci é responsável pelos problemas de desempenho do sistema. Quando detalhes de implementação de Ci são ocultados do resto do sistema, fica mais fácil trocar sua implementação por uma classe Ci', que use estruturas de dados e algoritmos mais eficientes. Essa troca também é mais segura, pois como as classes são independentes, diminui-se o risco de a mudança introduzir bugs em outras classes.
+
+		Facilidade de entendimento. Por exemplo, um novo desenvolvedor contratado pela empresa pode ser alocado para trabalhar em algumas classes apenas. Portanto, ele não precisará entender toda a complexidade do sistema, mas apenas a implementação das classes pelas quais ficou responsável.
+
+		- ocultamento de informação recomenda que classes devem esconder detalhes de implementação que estão sujeitos a mudanças.
+
+		- Dizemos também que o conjunto de métodos públicos de uma classe define a sua interface. A definição da interface de uma classe é muito importante, pois ela constitui a sua parte visível. Interfaces devem ser estáveis, pois mudanças na interface de uma classe podem demandar atualizações em seus clientes. 
