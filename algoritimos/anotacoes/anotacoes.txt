@@ -214,3 +214,9 @@ Serviçoes AWS
 
     - AMPLIFY
         -> usada para armazenar aplicação fullstack (next por exemplo)
+
+    
+Compilação x Runtime
+
+
+	A principal diferença é o momento em que os eventos acontecem: a compilação (compile time) é a fase em que o código-fonte é traduzido em código de máquina ou bytecode, enquanto o runtime (tempo de execução) é o período em que o programa já compilado está rodando na memória e na CPU

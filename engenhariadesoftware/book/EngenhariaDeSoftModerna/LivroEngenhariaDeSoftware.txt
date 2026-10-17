@@ -454,3 +454,32 @@ Cap 4 - Princípios de Projeto
 		- ocultamento de informação recomenda que classes devem esconder detalhes de implementação que estão sujeitos a mudanças.
 
 		- Dizemos também que o conjunto de métodos públicos de uma classe define a sua interface. A definição da interface de uma classe é muito importante, pois ela constitui a sua parte visível. Interfaces devem ser estáveis, pois mudanças na interface de uma classe podem demandar atualizações em seus clientes. 
+
+	## Coesão 
+
+		A implementação de qualquer classe deve ser coesa, isto é, toda classe deve implementar uma única funcionalidade ou serviço. Especificamente, todos os métodos e atributos de uma classe devem estar voltados para a implementação do mesmo serviço.
+
+		toda classe deve ter uma única responsabilidade no sistema
+	
+	## Acoplamento 
+
+		é a força (strength) da conexão entre duas classes
+
+		existe dois tipos de acoplamento entre classes: acoplamento aceitável e acoplamento ruim.
+
+		A classe A usa apenas métodos públicos da classe B.
+
+		acoplamento aceitável:
+
+		A interface provida por B é estável do ponto de vista sintático e semântico. Isto é, as assinaturas dos métodos públicos de B não mudam com frequência; e o mesmo acontece como o comportamento externo de tais métodos. Por isso, são raras as mudanças em B que terão impacto na classe A.
+
+		acoplamento ruim:
+
+		Quando a classe A realiza um acesso direto a um arquivo ou banco de dados da classe B.
+
+		Quando as classes A e B compartilham uma variável ou estrutura de dados global. Por exemplo, a classe B altera o valor de uma variável global que a classe A usa no seu código.
+
+		Quando a interface da classe B não é estável. Por exemplo, os métodos públicos de B são renomeados com frequência.
+
+
+		* o que caracteriza o acoplamento ruim é o fato de que a dependência entre as classes não é mediada por uma interface estável.*
