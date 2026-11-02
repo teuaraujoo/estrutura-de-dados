@@ -483,3 +483,12 @@ Cap 4 - Princípios de Projeto
 
 
 		* o que caracteriza o acoplamento ruim é o fato de que a dependência entre as classes não é mediada por uma interface estável.*
+
+Cap 5 - Padrões de Projeto
+
+	- Padrões de projeto descrevem objetos e classes que se relacionam para resolver um problema de projeto genérico em um contexto particular.
+
+	- Factory (Fábrica) -> 
+		
+		- é um padrão criacional de software que define uma interface para criar um objeto, mas deixa as subclasses decidirem qual classe concreta instanciar
+		- A ideia é colocar a responsabilidade de criar um objeto em um lugar específico, para que o código que vai usá-lo não precise conhecer todos os detalhes da sua criação.
