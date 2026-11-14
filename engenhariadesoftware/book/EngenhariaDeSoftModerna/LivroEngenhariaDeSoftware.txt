@@ -492,3 +492,36 @@ Cap 5 - Padrões de Projeto
 		
 		- é um padrão criacional de software que define uma interface para criar um objeto, mas deixa as subclasses decidirem qual classe concreta instanciar
 		- A ideia é colocar a responsabilidade de criar um objeto em um lugar específico, para que o código que vai usá-lo não precise conhecer todos os detalhes da sua criação.
+
+	- Singleton
+
+		deve ser usado para modelar recursos que, conceitualmente, devem possuir no máximo uma instância durante a execução de um programa. Por outro lado, um uso abusivo do padrão ocorre quando ele é adotado como um artifício para criação de variáveis globais.
+
+	- Proxy
+		O objetivo de um proxy é mediar o acesso a um objeto base, agregando-lhe funcionalidades, sem que ele tome conhecimento disso
+
+	- Adaptor / Wrapper (Adaptador)
+		Recomenda-se usar esse padrão quando temos que converter a interface de uma classe para outra interface, esperada pelos seus clientes.
+
+	- Fachada
+		é uma classe que oferece uma interface mais simples para um sistema. O objetivo é evitar que os usuários tenham que conhecer classes internas desse sistema; em vez disso, eles precisam interagir apenas com a classe de Fachada. As classes internas ficam encapsuladas por trás dessa Fachada.
+
+
+	- Retry / Circuit Breaker
+		| Característica | Retry Pattern | Circuit Breaker Pattern |
+		| --- | --- | --- |
+		| Tipo de falha | Transitória (instabilidade de milissegundos, timeout momentâneo, concorrência). | Persistente ou grave (o serviço externo caiu, fora do ar, banco do parceiro travou). |
+		| Ação | Tenta executar a mesma operação de novo (após um delay/backoff). | Interrompe imediatamente qualquer chamada para o serviço externo (Fail Fast). |
+		| Protege quem? | Protege a sua operação, garantindo que ela não falhe por um erro bobo de rede. | Protege o seu sistema (de travar recursos) e o parceiro (para não afundá-lo de vez). |
+		| Risco se usado sozinho | Pode causar um "Retry Storm" (tempestade de retentativas que sobrecarrega ainda mais um sistema que já está instável). | Se o timeout/limite for mal calibrado, pode bloquear chamadas desnecessariamente. |
+
+	- Máquida de estado
+		lógica que possui estados e transições 
+
+		é um modelo de projeto de software e hardware em que um sistema se encontra em apenas um estado por vez e transita para outro estado com base em eventos ou entradas
+
+		defini estados que podem existir e quais estados podem transicionar para outro estado
+
+		Tipos:
+			Máquina de Estados Implícita (em código procedural) 
+			Máquina de Estados Declarativa (com mapa fixo de transições).

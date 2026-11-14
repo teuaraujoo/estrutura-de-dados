@@ -1153,6 +1153,13 @@ RIGHT JOIN -> Retorna todas as linhas da tabela da direita, mesmo que não haja 
 
 FULL JOIN -> Retorna todas as linhas de todas as tabelas independente de ter correspondências entre elas
 
+CROSS JOIN -> é um tipo de junção que retorna o produto cartesiano entre duas ou mais tabelas
+    Isso significa que ele combina cada linha da primeira tabela com todas as linhas da segunda tabela, sem a necessidade de uma condição de igualdade ou cláusula ON
+
+UNIQUE KEY -> é uma restrição de unicidade (constraint)
+
+Collation (ou colação) -> no MySQL é o conjunto de regras que define como os caracteres de um texto são comparados e ordenados
+
 Retry com backoff -> é uma estratégia de programação usada para tentar novamente uma operação que falhou (como uma requisição a um servidor ou banco de dados), aumentando o tempo de espera de forma progressiva entre cada nova tentativa.
 
 	Retry (Nova tentativa): Se a operação falhar devido a um erro temporário (instabilidade na rede ou servidor sobrecarregado), o 	sistema repete a chamada automaticamente em vez de desistir de imediato.
@@ -1164,3 +1171,71 @@ Sandbox -> Ambiente isolado e seguro para testes que simula o ambiente de produ�
 	Você faz requisições reais à API, mas os dados são fictícios
 	Usado durante o desenvolvimento para testar integrações sem risco
 	Normalmente tem URL própria (ex.: api.sandbox.banco.com) e credenciais separadas
+
+by-pass -> significa um caminho alternativo ou um desvio criado para contornar um sistema, componente ou fluxo principal.
+
+Record TypeScript -> é um tipo utilitário embutido que serve para criar a estrutura de um objeto, definindo de forma rigorosa o tipo das chaves e o tipo dos valores
+```typescript
+Record<tipoA, tipoB>
+```
+
+VPS -> Uma VPC (Virtual Private Cloud, ou Nuvem Privada Virtual) -> é um ambiente de rede isolado e logicamente segmentado dentro de uma infraestrutura de nuvem pública
+
+GUID = UUID
+
+Cada ORM tem uma abstração específica, umas possuem mais o que fazem elas serem menos performáticas, outras possuem menos, o que fazem elas serem mais performáticas e próximas ao script sql de fato
+
+parameter store -> é um serviço da Amazon Web Services (AWS) que oferece armazenamento centralizado e seguro para dados de configuração, como senhas, strings de conexão, URLs de API e variáveis de ambiente.
+
+producer -> é a aplicação, serviço ou componente responsável por criar e enviar mensagens para um intermediário, como um broker. (ex.: RabbitMQ, Apache Kafka, Amazon SQS)
+
+lockDuration -> É o tempo pelo qual o BullMQ considera que um worker é o “dono” de um job em execução.
+
+webhook -> é um mecanismo de comunicação orientado a eventos que envia dados automaticamente de um sistema para outro via HTTP, funcionando como um "aviso em tempo real" quando algo específico acontece
+
+deduplicação -> É impedir que a mesma notificação seja processada mais de uma vez.
+
+deduplicação -> é o processo de identificar e remover cópias idênticas ou registros repetidos de um conjunto de dados, banco de dados, sistema de armazenamento ou lista de contatos
+
+deserialização -> é o processo de converter dados armazenados em um formato estruturado (como JSON, XML ou uma sequência de bytes) de volta para um objeto utilizável na memória de um programa
+
+cURL -> O cURL é uma ferramenta de linha de comando usada para transferir dados entre um computador e um servidor por meio de URLs
+
+Buffer -> é uma representação de dados binários brutos na memória, enquanto o Base64 é um formato de codificação que transforma esses dados binários em uma string de texto
+
+O cabeçalho de solicitação HTTP User-Agent é uma sequência de caracteres característica que permite que servidores e outros dispositivos de rede identifiquem o aplicativo, o sistema operacional, o fornecedor e/ou a versão do agente de usuário solicitante .
+
+O X-Forwarded-For é o principal cabeçalho HTTP usado para identificar o endereço IP original de um cliente quando ele se conecta a um servidor web por meio de um proxy ou balanceador de carga
+
+deadlock (impasse) ->  é uma situação na programação e em sistemas operacionais onde dois ou mais processos ou threads ficam bloqueados indefinidamente, pois cada um aguarda a liberação de um recurso que está sendo retido pelo outro
+
+application/octet-stream é o tipo MIME padrão usado na internet para identificar arquivos binários desconhecidos ou genéricos
+
+lock pessimista (bloqueio pessimista) ✅ -> é uma estratégia de controle de concorrência em bancos de dados que trava o registro no momento da leitura para impedir que outros processos o alterem até que a transação seja concluída
+
+O jobId determinístico evita duplicidade de enfileiramento enquanto aquele job ainda existe no Redis. A idempotência do processamento deve ser garantida também pelo banco e pelas regras de negócio.
+
+BullMQ é a biblioteca que implementa e administra a fila.
+Redis é onde o estado da fila e os jobs ficam armazenados.
+
+O produtor (Queue) escreve os jobs no Redis.
+O consumidor (Worker/Processor) busca e processa esses jobs no Redis.
+
+O BullMQ implementa os conceitos de fila, job, worker, retry, backoff, concorrência e locks utilizando o Redis como armazenamento compartilhado e mecanismo de coordenação. A aplicação executa os workers e processors, enquanto o Redis mantém os jobs e seus estados.
+
+URI-> identifica um recurso, mas não necessariamente informa como encontrá-lo.
+URL:
+  URL significa Uniform Resource Locator (Localizador Uniforme de Recursos).
+  Ela é um tipo específico de URI que, além de identificar um recurso, fornece informações sobre onde ele está e como acessá-lo.
+
+Comandos git: 
+
+- git switch -c nome-local --track origin/nome-remoto - **CRIAR UMA NOVA BRANCH LOCAL BASEADA EM UMA BRANCH REMOTA**
+
+- git commit --amend -m "" - RENOMEAR O **ÚLTIMO** COMMIT FEITO
+
+- git reset --soft HEAD\~1 -> VOLTAR O **ÚLTIMO** COMMIT FEITO
+
+- git rev-list --count HEAD -> **CONTAR QTD DE COMMITS DE UMA BRANCH**
+
+- git push origin --delete <nome-da-branch>  -> **DELETAR BRANCH REMOTA**
