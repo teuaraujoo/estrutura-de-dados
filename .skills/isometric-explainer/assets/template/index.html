@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Curso interativo</title>
+    <meta name="description" content="Um curso interativo: cada ideia é um diagrama animado que você percorre passo a passo." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      // apply the theme before first paint so the page never flashes
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'dark' || (!t && matchMedia('(prefers-color-scheme: dark)').matches)) document.documentElement.dataset.theme = 'dark';
+      } catch (e) {}
+    </script>
+    <script type="module" src="src/main.js"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <noscript><p style="font-family: monospace; max-width: 560px; margin: 15vh auto">Este site precisa de JavaScript.</p></noscript>
+  </body>
+</html>

@@ -1239,3 +1239,6 @@ Comandos git:
 - git rev-list --count HEAD -> **CONTAR QTD DE COMMITS DE UMA BRANCH**
 
 - git push origin --delete <nome-da-branch>  -> **DELETAR BRANCH REMOTA**
+R
+
+SSH (Secure Shell) -> É um protocolo que permite acessar e administrar remotamente um computador de maneira criptografada.
